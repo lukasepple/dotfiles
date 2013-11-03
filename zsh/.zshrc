@@ -29,4 +29,4 @@ alias uberspace="ssh lukase@lukasepple.de"
 
 # jump etc.
 source $HOME/.zsh_helpers/mark
-cat $HOME/.zsh_helpers/greeting
+cat $HOME/.zsh_helpers/tux-greets
