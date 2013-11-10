@@ -3,6 +3,8 @@ autoload -U compinit
 compinit
 setopt completealiases
 
+# PATH
+export PATH="/usr/local/bin:${PATH}" # Homebrew
 #Editor
 export EDITOR="vim"
 
