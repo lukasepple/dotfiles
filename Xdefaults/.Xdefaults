@@ -28,7 +28,7 @@ URxvt.perl-lib:         /usr/lib/urxvt/perl/
 URxvt.colorUL:          #4682B4
 URxvt.perl-ext-common:  default,confirm-paste,url-select,keyboard-select,clipboard,tabbed
 !URLs
-URxvt.url-select.launcher:  dwb -n
+URxvt.url-select.launcher:  dwb
 URxvt.url-select.underline: true
 !Paste
 URxvt.keysym.M-u:       perl:url-select:select_next
