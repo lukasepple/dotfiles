@@ -14,7 +14,8 @@ set t_Co=256
 "Color
 "colorscheme vydark 
 set background=dark
-colorscheme solarized
+"colorscheme solarized
+colorscheme vydark
 
 "Backspacefix
 set backspace=indent,eol,start
@@ -27,7 +28,8 @@ set laststatus=2
 set noshowmode
 
 let g:airline_detect_paste=1
-let g:airline_theme='solarized'
+"let g:airline_theme='solarized'
+let g:airline_theme='luna'
 
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
