@@ -4,7 +4,7 @@ compinit
 setopt completealiases
 
 # PATH
-export PATH="/usr/local/bin:${PATH}" # Homebrew
+export PATH="/usr/local/bin:$HOME/bin:${PATH}" # Homebrew
 #Editor
 export EDITOR="vim"
 
