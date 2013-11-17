@@ -7,7 +7,7 @@ setopt completealiases
 export PATH="/usr/local/bin:$HOME/bin:${PATH}" # Homebrew
 #Applications
 export EDITOR="vim"
-
+export BROWSER="dwb"
 # Prompt
 export TERM="xterm-256color"
 
