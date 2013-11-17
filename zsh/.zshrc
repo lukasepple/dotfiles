@@ -4,8 +4,8 @@ compinit
 setopt completealiases
 
 # PATH
-export PATH="/usr/local/bin:${PATH}" # Homebrew
-#Editor
+export PATH="/usr/local/bin:$HOME/bin:${PATH}" # Homebrew
+#Applications
 export EDITOR="vim"
 
 # Prompt
@@ -15,7 +15,7 @@ autoload -U promptinit
 autoload -U colors && colors
 export PROMPT="
 %{$fg[yellow]%}%n %{$fg[white]%}on %{$fg[yellow]%}%m %{$fg[white]%}in %{$fg[blue]%}%~ 
-→ %{$fg[white]%} "
+> %{$fg[white]%} "
 export RPROMPT="[%T]"
 
 #CLICOLOR
