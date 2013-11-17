@@ -14,11 +14,12 @@ URxvt.saveLines:        65535
 URxvt.internalBorder:   2
 URxvt.loginShell:       true
 URxvt.cursorUnderline:  true
-URxvt.xftAntialias:     false
+URxvt.xftAntialias:     true
 URxvt.borderless:       true
 URxvt.background:       #000000
 URxvt.foreground:       #BEBEBE
 URxvt.font:             xft:monoOne:pixelsize=14
+!URxvt.font: xft:Bitstream Vera Sans Mono:pixelsize=14
 URxvt.perl-lib:         /usr/lib/urxvt/perl/
 !URxvt.perl-ext-common:  default,matcher,searchable-scrollback
 !URxvt.url-launcher:     /usr/bin/firefox
