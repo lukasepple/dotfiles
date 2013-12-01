@@ -15,7 +15,8 @@ set t_Co=256
 "colorscheme vydark 
 set background=dark
 "colorscheme solarized
-colorscheme vydark
+"colorscheme vydark
+colorscheme dc2
 
 "Backspacefix
 set backspace=indent,eol,start
