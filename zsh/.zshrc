@@ -32,4 +32,5 @@ alias tma='tmux attach -d -t'
 
 # jump etc.
 source $HOME/.zsh_helpers/mark
-cat $HOME/.zsh_helpers/tux-greets
+#cat $HOME/.zsh_helpers/tux-greets
+doge
