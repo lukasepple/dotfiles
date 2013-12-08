@@ -9,7 +9,7 @@ export PATH="/usr/local/bin:$HOME/bin:${PATH}" # Homebrew
 export EDITOR="vim"
 export BROWSER="dwb"
 # Prompt
-export TERM="xterm-256color"
+#export TERM="xterm-256color" NO FORCING OF $TERM THAT'S BAD!
 
 autoload -U promptinit
 autoload -U colors && colors
@@ -32,4 +32,5 @@ alias tma='tmux attach -d -t'
 
 # jump etc.
 source $HOME/.zsh_helpers/mark
-cat $HOME/.zsh_helpers/tux-greets
+#cat $HOME/.zsh_helpers/tux-greets
+#doge
