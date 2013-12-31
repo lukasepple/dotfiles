@@ -13,12 +13,12 @@
 [submodule "vim/.vim/bundle/supertab"]
 	path = vim/.vim/bundle/supertab
 	url = https://github.com/ervandew/supertab.git
-[submodule "vim/.vim/bundle/vim-colors-solarized"]
-	path = vim/.vim/bundle/vim-colors-solarized
-	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "vim/.vim/bundle/vim-markdown"]
 	path = vim/.vim/bundle/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown.git
 [submodule "vim/.vim/bundle/goyo"]
 	path = vim/.vim/bundle/goyo
 	url = https://github.com/junegunn/goyo.vim.git
+[submodule "vim/.vim/bundle/vim-dispatch"]
+	path = vim/.vim/bundle/vim-dispatch
+	url = https://github.com/tpope/vim-dispatch.git
