@@ -29,7 +29,6 @@ HISTFILE=~/.history
 # Helpers
 alias uberspace="ssh lukase@lukasepple.de"
 alias tma='tmux attach -d -t'
-
 # jump etc.
 source $HOME/.zsh_helpers/mark
 #cat $HOME/.zsh_helpers/tux-greets
