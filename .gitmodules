@@ -22,3 +22,6 @@
 [submodule "vim/.vim/bundle/vim-dispatch"]
 	path = vim/.vim/bundle/vim-dispatch
 	url = https://github.com/tpope/vim-dispatch.git
+[submodule "vim/.vim/bundle/vim-arduino-syntax"]
+	path = vim/.vim/bundle/vim-arduino-syntax
+	url = https://github.com/sudar/vim-arduino-syntax.git
