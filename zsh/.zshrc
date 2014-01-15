@@ -29,7 +29,14 @@ HISTFILE=~/.history
 # Helpers
 alias uberspace="ssh lukase@lukasepple.de"
 alias tma='tmux attach -d -t'
+alias doch='sudo $(history -p !-1)'
+# git
+alias g=git
+
+#dogetribusted version control
+alias such=git
+alias very=git
+alias wow='git status'
+
 # jump etc.
 source $HOME/.zsh_helpers/mark
-#cat $HOME/.zsh_helpers/tux-greets
-#doge
