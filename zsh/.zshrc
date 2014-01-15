@@ -29,7 +29,7 @@ HISTFILE=~/.history
 # Helpers
 alias uberspace="ssh lukase@lukasepple.de"
 alias tma='tmux attach -d -t'
-alias doch='sudo $(history -p !-1)'
+alias doch='sudo $(fc -ln -1)'
 # git
 alias g=git
 
