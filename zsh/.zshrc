@@ -40,3 +40,6 @@ alias wow='git status'
 
 # jump etc.
 source $HOME/.zsh_helpers/mark
+
+# new nano uberspace
+alias nnano=$HOME/bin/nano
