@@ -8,6 +8,9 @@ export PATH="/usr/local/bin:$HOME/bin:${PATH}" # Homebrew
 #Applications
 export EDITOR="vim"
 export BROWSER="dwb"
+
+# go
+export GOPATH="~/go"
 # Prompt
 #export TERM="xterm-256color" NO FORCING OF $TERM THAT'S BAD!
 
