@@ -10,7 +10,7 @@ export EDITOR="vim"
 export BROWSER="dwb"
 
 # go
-export GOPATH="~/go"
+export GOPATH="$HOME/go"
 # Prompt
 #export TERM="xterm-256color" NO FORCING OF $TERM THAT'S BAD!
 
