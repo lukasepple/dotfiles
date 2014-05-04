@@ -4,13 +4,13 @@ compinit
 setopt completealiases
 
 # PATH
-export PATH="/usr/local/bin:$HOME/bin:${PATH}" # Homebrew
+export PATH="/usr/local/bin:$HOME/bin:${PATH}:$HOME/Hacking/go/bin" # Homebrew, go
 #Applications
 export EDITOR="vim"
 export BROWSER="dwb"
 
 # go
-export GOPATH="$HOME/go"
+export GOPATH="$HOME/Hacking/go"
 # Prompt
 #export TERM="xterm-256color" NO FORCING OF $TERM THAT'S BAD!
 
