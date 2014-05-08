@@ -4,7 +4,11 @@ compinit
 setopt completealiases
 
 # PATH
-export PATH="/usr/local/bin:$HOME/bin:${PATH}:$HOME/Hacking/go/bin" # Homebrew, go
+if [[ $(uname) = "Darwin" ]]; then
+	export PATH="/usr/local/bin:$HOME/bin:${PATH}:$HOME/Hacking/go/bin" # Homebrew, go
+else
+	export PATH="$HOME/bin:${PATH}:$HOME/Hacking/go/bin"
+fi
 #Applications
 export EDITOR="vim"
 export BROWSER="dwb"
