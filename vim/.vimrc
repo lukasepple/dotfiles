@@ -8,14 +8,11 @@ filetype plugin indent on
 
 "syntax
 syntax enable
-set number
+"set number
 set t_Co=256
 
 "Color
-"colorscheme vydark 
 set background=dark
-"colorscheme solarized
-"colorscheme vydark
 colorscheme dc2
 
 "Backspacefix
