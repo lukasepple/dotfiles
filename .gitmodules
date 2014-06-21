@@ -22,3 +22,6 @@
 [submodule "vim/.vim/bundle/slimv"]
 	path = vim/.vim/bundle/slimv
 	url = https://github.com/kovisoft/slimv.git
+[submodule "vim/.vim/bundle/rainbow_parenthesis"]
+	path = vim/.vim/bundle/rainbow_parenthesis
+	url = https://github.com/kien/rainbow_parentheses.vim.git
