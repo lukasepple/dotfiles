@@ -8,6 +8,7 @@ filetype plugin indent on
 
 "syntax
 syntax enable
+set autoindent
 "set number
 set t_Co=256
 
@@ -17,6 +18,9 @@ colorscheme dc2
 
 "Backspacefix
 set backspace=indent,eol,start
+
+"lisp
+set lisp
 
 "vim-airline
 "Fixes
