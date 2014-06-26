@@ -34,7 +34,7 @@ SAVEHIST=1000
 HISTFILE=~/.history
 
 # Helpers
-alias uberspace="ssh lukase@lukasepple.de"
+alias uberspace="mosh -p 64374 lukase@lukasepple.de"
 alias tma='tmux attach -d -t'
 alias doch='sudo $(fc -ln -1)'
 # git
