@@ -1,11 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/Users/lukasepple/Hacking/c/glibc/socket'
-let g:netrw_dirhist_2='/Users/lukasepple/Hacking/c/glibc'
-let g:netrw_dirhist_3='/Users/lukasepple/.mutt'
-let g:netrw_dirhist_4='/Users/lukasepple'
-let g:netrw_dirhist_5='/Users/lukasepple/.mutt'
-let g:netrw_dirhist_6='/Users/lukasepple/.offlineimap'
-let g:netrw_dirhist_7='/Users/lukasepple/.mutt'
-let g:netrw_dirhist_8='/Users/lukasepple/.emacs.d'
-let g:netrw_dirhist_9='/Users/lukasepple/.offlineimap'
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/Users/lukasepple/Hacking/Arduino/RTTY/lib/RTTY'
+let g:netrw_dirhist_2='/Users/lukasepple/Hacking/Arduino/RTTY/lib/RTTY/RTTY'
