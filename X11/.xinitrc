@@ -4,10 +4,16 @@
 #
 # Executed by startx (run your window manager from here)
 
-start-pulseaudio-x11
+#start-pulseaudio-x11
 
 # Add .Xresources
 xrdb -merge ~/.Xresources
+
+source /etc/X11/xinit/xinitrc.d/30-dbus
+eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
+export GPG_AGENT_INFO SSH_AUTH_SOCK
+
+
 
 function start_2bwm () {
 cd ~
