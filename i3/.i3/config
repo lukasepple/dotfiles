@@ -185,4 +185,4 @@ bindsym $mod+Shift+Escape exec i3lock -p win -i ~/.i3/lock.png
 
 exec xautolock -time 15 -locker 'i3lock -d -p win -i ~/.i3/lock.png' &
 
-
+exec nm-applet &
