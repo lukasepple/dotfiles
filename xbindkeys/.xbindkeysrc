@@ -1,0 +1,21 @@
+###########################
+# xbindkeys configuration #
+###########################
+
+#keystate_numlock = enable
+#keystate_capslock = enable
+#keystate_scrolllock= enable
+
+"amixer set Master 5+"
+    XF86AudioRaiseVolume
+"amixer set Master 5-"
+    XF86AudioLowerVolume
+
+"amixer set Master 0"
+    XF86AudioMute
+"chromium"
+    XF86HomePage
+
+##################################
+# End of xbindkeys configuration #
+##################################
