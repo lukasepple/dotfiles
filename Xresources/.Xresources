@@ -5,6 +5,7 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 URxvt.termName:         xterm-256color
+URxvt.urgentOnBell:     true
 URxvt.scrollBar:        off
 URxvt.jumpScroll:       true
 URxvt.secondaryScroll:  true
@@ -13,7 +14,9 @@ URxvt.cursorBlink:      false
 URxvt.saveLines:        65535
 URxvt.internalBorder:   2
 URxvt.loginShell:       true
-URxvt.cursorUnderline:  true
+URxvt.cursorUnderline:  false
+URxvt.cursorColor:      #ffffff
+URxvt.cursorColor2:     #000000
 URxvt.xftAntialias:     true
 URxvt.borderless:       true
 URxvt.background:       #000000
@@ -27,11 +30,12 @@ URxvt.perl-ext-common:  default,confirm-paste,url-select,keyboard-select,clipboa
 URxvt.url-select.launcher:  chromium
 URxvt.url-select.underline: true
 !Paste
-URxvt.keysym.M-u:       perl:url-select:select_next
-URxvt.keysym.M-Escape:  perl:keyboard-select:activate
-URxvt.keysym.M-c:       perl:clipboard:copy
-URxvt.keysym.M-v:       perl:clipboard:paste
-URxvt.keysym.M-C-v:     perl:clipboard:paste_escaped
+URxvt.keysym.M-u:                   perl:url-select:select_next
+URxvt.keysym.M-Escape:              perl:keyboard-select:activate
+URxvt.keysym.M-c:                   perl:clipboard:copy
+URxvt.keysym.M-v:                   perl:clipboard:paste
+URxvt.keysym.M-C-v:                 perl:clipboard:paste_escaped
+URxvt.iso14755_52:                  false
 
 !Tabs
 URxvt.tabbed.tabbar-fg: 2 
