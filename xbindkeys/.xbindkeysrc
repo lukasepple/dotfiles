@@ -16,6 +16,12 @@
 "chromium"
     XF86HomePage
 
+"xbacklight -inc 5"
+    XF86MonBrightnessUp
+
+"xbacklight -dec 5"
+   XF86MonBrightnessDown
+
 ##################################
 # End of xbindkeys configuration #
 ##################################
