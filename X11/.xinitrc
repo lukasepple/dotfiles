@@ -12,7 +12,7 @@ xrdb -merge ~/.Xresources
 # gnome keyring for nm-applet
 source /etc/X11/xinit/xinitrc.d/30-dbus
 eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
-export GPG_AGENT_INFO SSH_AUTH_SOCK
+#export GPG_AGENT_INFO SSH_AUTH_SOCK
 
 xbindkeys
 
