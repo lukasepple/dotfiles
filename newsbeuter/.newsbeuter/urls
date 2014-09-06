@@ -17,6 +17,7 @@ http://blog.dieweltistgarnichtso.net/feed
 http://www.die-drei-vogonen.de/feed/
 http://dominikjohann.tumblr.com/rss
 http://www.haukeluebbers.de/feed/
+http://fabienne.us/
 http://einemarie.tumblr.com/rss
 http://www.elektrischer-reporter.de/phase3/rss2_0/
 http://fotografiona.tumblr.com/rss
@@ -50,7 +51,6 @@ http://www.plomlompom.de/PlomWiki/plomwiki.php?action=AtomDiffs
 http://feeds.feedburner.com/PoorlyDrawnLines
 https://github.com/lukasepple.private.atom?token=b60f69245b938792df8e03562ad63ab6
 http://www.pro-linux.de/rss/index1.xml
-https://github.com/fguillot/miniflux/commits/master.atom
 http://regnerischernachmittag.wordpress.com/feed/
 http://www.robotergesetze.com/feed/
 http://blog.schauderbasis.de/rss/
@@ -98,9 +98,9 @@ http://www.ftcommunity.de/rss/ftc.rss
 http://unkonstruktiv.de/rss
 http://grandhotelcosmopolis.wordpress.com/feed/
 http://hoohead.hoohost.org/feed/
-http://kadero.be/feed/
 http://ink361.com/feed/user/katethie
 https://log.koehr.in/feed.rss
+http://koex.name/
 http://kosmoproleten.tumblr.com/rss
 http://kulturproktologie.de/?feed=rss2
 http://lolnein.com/feed/
@@ -123,3 +123,8 @@ http://xsteadfastx.github.io/blog/feeds/all.atom.xml
 https://tech.zeppinger.de/blog/rss
 http://www.blogbleistift.de/rss
 http://theresa.someserver.de/blog/
+http://telekommunisten.net/
+https://www.imperialviolet.org/
+http://www.clcomic.com/feed
+http://seemann.geek-net.de/blog/blog.cgi/rss.xml
+http://www.voidlinux.eu/atom.xml
