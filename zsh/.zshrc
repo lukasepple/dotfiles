@@ -20,10 +20,11 @@ export GOPATH="$HOME/Hacking/go"
 
 autoload -U promptinit
 autoload -U colors && colors
-export PROMPT="
-%{$fg[yellow]%}%n %{$fg[white]%}on %{$fg[yellow]%}%m %{$fg[white]%}in %{$fg[blue]%}%~ 
-> %{$fg[white]%} "
-export RPROMPT="[%T]"
+#export PROMPT="
+#%{$fg[yellow]%}%n %{$fg[white]%}on %{$fg[yellow]%}%m %{$fg[white]%}in %{$fg[blue]%}%~ 
+#> %{$fg[white]%} "
+export PROMPT="%B%{$fg[yellow]%}-%{$fg[white]%}%b "
+export RPROMPT="%~"
 
 #CLICOLOR
 export CLICOLOR="true"
