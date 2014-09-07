@@ -22,6 +22,9 @@
 "xbacklight -dec 5"
    XF86MonBrightnessDown
 
+"arandr"
+   XF86Display
+
 ##################################
 # End of xbindkeys configuration #
 ##################################
