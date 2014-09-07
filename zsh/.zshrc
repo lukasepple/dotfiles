@@ -58,7 +58,7 @@ irssi_notifier() {
             url=`echo \"$message\" | grep -Eo 'https?://[^ >]+' | head -1`;
 
             if [ ! "$url" ]; then
-                terminal-notifier -title "\"$heading\"" -message "\"$message\"" -activate com.apple.Terminal;
+                terminal-notifier -title "\"$heading\"" -message "\"$message\"" -activate com.googlecode.iterm2;
             else
                 terminal-notifier -title "\"$heading\"" -message "\"$message\"" -open "\"$url\"";
             fi;
