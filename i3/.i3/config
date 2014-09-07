@@ -56,7 +56,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+b split h # It's sad that i must use Shift here...
+bindsym $mod+b split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -168,13 +168,13 @@ bar {
 # window style
 # colors
 # class                 border  backgr. text    indicator
-#client.focused          #007172 #007172 #ffffff #007172
-#client.focused_inactive #333333 #5f676a #ffffff #484e50
-#client.unfocused        #333333 #222222 #888888 #292d2e
-#client.urgent           #870000 #870000 #ffffff #870000
+client.focused          #1974D2 #1974D2 #ffffff #1974D2
+client.focused_inactive #333333 #5f676a #ffffff #484e50
+client.unfocused        #333333 #222222 #888888 #292d2e
+client.urgent           #870000 #870000 #ffffff #870000
 
 # no border
-new_window none
+new_window pixel
 
 # desktop bg
 exec feh --bg-scale ~/.i3/wall.jpg
