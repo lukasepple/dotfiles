@@ -12,9 +12,11 @@ xrdb -merge ~/.Xresources
 # gnome keyring for nm-applet
 source /etc/X11/xinit/xinitrc.d/30-dbus
 eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
-#export GPG_AGENT_INFO SSH_AUTH_SOCK
 
 xbindkeys
+
+#redshift!!!
+redshift -l 48.3718:10.8926 &
 
 function start_2bwm () {
 cd ~
@@ -37,4 +39,8 @@ function start_i3 () {
 exec i3
 }
 
-start_i3
+function start_hlwm() {
+exec herbstluftwm --locked
+}
+
+start_hlwm
