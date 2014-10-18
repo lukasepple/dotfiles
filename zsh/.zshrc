@@ -20,10 +20,11 @@ export GOPATH="$HOME/Hacking/go"
 
 autoload -U promptinit
 autoload -U colors && colors
-export PROMPT="
-%{$fg[yellow]%}%n %{$fg[white]%}on %{$fg[yellow]%}%m %{$fg[white]%}in %{$fg[blue]%}%~ 
-> %{$fg[white]%} "
-export RPROMPT="[%T]"
+#export PROMPT="
+#%{$fg[yellow]%}%n %{$fg[white]%}on %{$fg[yellow]%}%m %{$fg[white]%}in %{$fg[blue]%}%~ 
+#> %{$fg[white]%} "
+export PROMPT="%B%{$fg[yellow]%}-%{$fg[white]%}%b "
+export RPROMPT="%~"
 
 #CLICOLOR
 export CLICOLOR="true"
@@ -34,7 +35,8 @@ SAVEHIST=1000
 HISTFILE=~/.history
 
 # Helpers
-alias uberspace="ssh lukase@lukasepple.de"
+alias ls="ls --color=auto"
+alias uberspace="mosh -p 64374 lukase@lukasepple.de"
 alias tma='tmux attach -d -t'
 alias doch='sudo $(fc -ln -1)'
 # git
@@ -51,15 +53,4 @@ source $HOME/.zsh_helpers/mark
 # new nano uberspace
 alias nnano=$HOME/bin/nano
 
-irssi_notifier() {
-    ssh lukase@lukasepple.de 'echo -n "" > ~/.irssi/fnotify; tail -f ~/.irssi/fnotify' | \
-            while read heading message; do
-            url=`echo \"$message\" | grep -Eo 'https?://[^ >]+' | head -1`;
 
-            if [ ! "$url" ]; then
-                terminal-notifier -title "\"$heading\"" -message "\"$message\"" -activate com.apple.Terminal;
-            else
-                terminal-notifier -title "\"$heading\"" -message "\"$message\"" -open "\"$url\"";
-            fi;
-        done
-}

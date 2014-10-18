@@ -22,7 +22,7 @@ floating_modifier $mod
 bindsym $mod+Return exec urxvt
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
@@ -56,7 +56,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+b split h # It's sad that i must use Shift here...
+bindsym $mod+b split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -153,14 +153,14 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
-	position bottom 
+	position top 
 	colors{
 		background #000000
 		statusline #ffffff
-		#class            border  bg      text
-		focused_workspace #007172 #007172 #ffffff
+		#class             border  bg      text
+		focused_workspace  #1974D2 #1974D2 #ffffff
 		inactive_workspace #333333 #333333 #888888
-		urgent_workspace #870000 #870000 #ffffff
+		urgent_workspace   #870000 #870000 #ffffff
 	}
 	
 }
@@ -168,21 +168,19 @@ bar {
 # window style
 # colors
 # class                 border  backgr. text    indicator
-client.focused          #007172 #007172 #ffffff #007172
+client.focused          #1974D2 #1974D2 #ffffff #1974D2
 client.focused_inactive #333333 #5f676a #ffffff #484e50
 client.unfocused        #333333 #222222 #888888 #292d2e
 client.urgent           #870000 #870000 #ffffff #870000
 
-# border
-new_window none
+# no border
+new_window pixel
 
 # desktop bg
 exec feh --bg-scale ~/.i3/wall.jpg
-
 # standby and lockscreen w/ $mod+Shift+v and $mod+Shift+Esc
 bindsym $mod+Shift+Escape exec i3lock -p win -i ~/.i3/lock.png
-
-
+# autolock after 15 minutes
 exec xautolock -time 15 -locker 'i3lock -d -p win -i ~/.i3/lock.png' &
-
-
+# for wlan etc.
+exec nm-applet &

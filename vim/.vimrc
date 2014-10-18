@@ -8,19 +8,48 @@ filetype plugin indent on
 
 "syntax
 syntax enable
-set autoindent
+
 "set number
 set t_Co=256
 
 "Color
-set background=dark
-colorscheme dc2
+"set background=dark
+colorscheme xterm16
+let xterm16_colormap    = 'allblue'
+let xterm16_brightness  = 'medium'
 
 "Backspacefix
 set backspace=indent,eol,start
 
-"lisp
-set lisp
+"Tabs
+set autoindent
+set shiftwidth=4
+set tabstop=4
+set breakindent
+
+"rainbow!
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
+let g:rbpt_colorpairs = [
+	\ ['brown',       'RoyalBlue3'],
+	\ ['Darkblue',    'SeaGreen3'],
+	\ ['darkgray',    'DarkOrchid3'],
+	\ ['darkgreen',   'firebrick3'],
+	\ ['darkcyan',    'RoyalBlue3'],
+	\ ['darkred',     'SeaGreen3'],
+	\ ['darkmagenta', 'DarkOrchid3'],
+	\ ['brown',       'firebrick3'],
+	\ ['gray',        'RoyalBlue3'],
+	\ ['darkmagenta', 'DarkOrchid3'],
+	\ ['Darkblue',    'firebrick3'],
+	\ ['darkgreen',   'RoyalBlue3'],
+	\ ['darkcyan',    'SeaGreen3'],
+	\ ['darkred',     'DarkOrchid3'],
+	\ ['red',         'firebrick3'],
+	\ ]
 
 "vim-airline
 "Fixes
