@@ -2,30 +2,34 @@
 " \  /  | |-|-|
 ". \/   | | | |rc by Lukas
 
-"General
-execute pathogen#infect()
-filetype plugin indent on
+"pathogen
+"execute pathogen#infect()
+"filetype plugin indent on
 
-"syntax
-syntax enable
-
-"set number
-set t_Co=256
+"plug.vim
+call plug#begin('~/.vim/plugged')
+Plug 'bling/vim-airline'
+Plug 'ervandew/supertab'
+Plug 'junegunn/goyo.vim'
+Plug 'kien/rainbow_parentheses.vim'
+Plug 'tpope/vim-sensible'
+Plug 'chriskempson/base16-vim'
+Plug 'godlygeek/csapprox'
+Plug 'plasticboy/vim-markdown'
+call plug#end()
 
 "Color
-"set background=dark
-colorscheme xterm16
-let xterm16_colormap    = 'allblue'
-let xterm16_brightness  = 'medium'
+set background=dark
+colorscheme base16-ashes
 
 "Backspacefix
-set backspace=indent,eol,start
+"set backspace=indent,eol,start
 
 "Tabs
-set autoindent
-set shiftwidth=4
-set tabstop=4
-set breakindent
+"set autoindent
+"set shiftwidth=4
+"set tabstop=4
+"set breakindent
 
 "rainbow!
 au VimEnter * RainbowParenthesesToggle
