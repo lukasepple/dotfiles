@@ -9,10 +9,6 @@
 # Add .Xresources
 xrdb -merge ~/.Xresources
 
-# gnome keyring for nm-applet
-source /etc/X11/xinit/xinitrc.d/30-dbus
-eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
-
 xbindkeys
 
 #redshift!!!
@@ -44,3 +40,4 @@ exec herbstluftwm --locked
 }
 
 start_hlwm
+#start_i3
