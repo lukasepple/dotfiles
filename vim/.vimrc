@@ -25,6 +25,7 @@ set backspace=indent,eol,start
 set autoindent
 set shiftwidth=4
 set tabstop=4
+set breakindent
 
 "rainbow!
 au VimEnter * RainbowParenthesesToggle
