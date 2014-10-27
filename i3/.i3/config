@@ -177,10 +177,10 @@ client.urgent           #870000 #870000 #ffffff #870000
 new_window pixel
 
 # desktop bg
-exec feh --bg-scale ~/.i3/wall.jpg
+exec feh --bg-scale ~/Pictures/bg.jpg
 # standby and lockscreen w/ $mod+Shift+v and $mod+Shift+Esc
-bindsym $mod+Shift+Escape exec i3lock -p win -i ~/.i3/lock.png
+bindsym $mod+Shift+Escape exec '~/bin/lock' 
 # autolock after 15 minutes
-exec xautolock -time 15 -locker 'i3lock -d -p win -i ~/.i3/lock.png' &
+exec xautolock -time 15 -locker '~/bin/lock' &
 # for wlan etc.
 exec nm-applet &
