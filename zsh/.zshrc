@@ -14,9 +14,8 @@ export EDITOR="vim"
 export BROWSER="dwb"
 
 # go
-export GOPATH="$HOME/Hacking/go"
+export GOPATH="$HOME/Hacking/go/gopath"
 # Prompt
-#export TERM="xterm-256color" NO FORCING OF $TERM THAT'S BAD!
 
 autoload -U promptinit
 autoload -U colors && colors
