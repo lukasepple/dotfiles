@@ -2,9 +2,8 @@
 " \  /  | |-|-|
 ". \/   | | | |rc by Lukas
 
-"pathogen
-"execute pathogen#infect()
-"filetype plugin indent on
+" completion
+set completeopt=menu,preview
 
 "plug.vim
 call plug#begin('~/.vim/plugged')
@@ -20,16 +19,12 @@ call plug#end()
 
 "Color
 set background=dark
-colorscheme base16-ashes
-
-"Backspacefix
-"set backspace=indent,eol,start
+colorscheme base16-chalk
 
 "Tabs
-"set autoindent
-"set shiftwidth=4
-"set tabstop=4
-"set breakindent
+set shiftwidth=4
+set tabstop=4
+set breakindent
 
 "rainbow!
 au VimEnter * RainbowParenthesesToggle
