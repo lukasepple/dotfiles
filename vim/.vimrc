@@ -15,7 +15,31 @@ Plug 'tpope/vim-sensible'
 Plug 'chriskempson/base16-vim'
 Plug 'godlygeek/csapprox'
 Plug 'plasticboy/vim-markdown'
+Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/syntastic'
 call plug#end()
+
+""""""""""""""""""
+"" custom bindings
+""""""""""""""""""
+
+"<Leader>
+let mapleader = ","
+
+"toggle line numbers
+nmap \l :setlocal number!<CR>
+"toggle paste mode
+nmap \o :set paste!<CR>
+
+"natural navigating
+nmap j gj
+nmap k gk
+"switch between buffers
+nmap <C-n> :bnext<CR>
+nmap <C-p> :bprev<CR>
+"CrtlP
+nmap <Leader>b :CtrlPBuffer<CR>
+nmap <Leader><Leader> :CtrlP<CR>
 
 "Color
 set background=dark
@@ -58,9 +82,11 @@ set laststatus=2
 set noshowmode
 
 let g:airline_detect_paste=1
-"let g:airline_theme='solarized'
 let g:airline_theme='luna'
 
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
+
+"syntastic
+let g:syntastic_python_python_exec = '/usr/bin/python3'
