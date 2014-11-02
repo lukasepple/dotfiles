@@ -7,7 +7,7 @@ setopt completealiases
 if [[ $(uname) = "Darwin" ]]; then
 	export PATH="/usr/local/bin:$HOME/bin:${PATH}:$HOME/Hacking/go/bin" # Homebrew, go
 else
-	export PATH="$HOME/bin:${PATH}:$HOME/Hacking/go/bin"
+	export PATH="$HOME/bin:${PATH}:$HOME/Hacking/go/gopath/bin"
 fi
 #Applications
 export EDITOR="vim"
@@ -46,8 +46,8 @@ alias such=git
 alias very=git
 alias wow='git status'
 
-# jump etc.
 source $HOME/.zsh_helpers/mark
+source $HOME/.zsh_helpers/k/k.sh
 
 # new nano uberspace
 alias nnano=$HOME/bin/nano

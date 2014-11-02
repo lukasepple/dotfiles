@@ -4,12 +4,13 @@
 #
 # Executed by startx (run your window manager from here)
 
-#start-pulseaudio-x11
-
 # Add .Xresources
 xrdb -merge ~/.Xresources
 
 xbindkeys
+
+#Escape instead of caps lock!
+setxkbmap -option caps:escape
 
 #redshift!!!
 redshift -l 48.3718:10.8926 &
@@ -39,5 +40,5 @@ function start_hlwm() {
 exec herbstluftwm --locked
 }
 
-start_hlwm
-#start_i3
+#start_hlwm
+start_i3
