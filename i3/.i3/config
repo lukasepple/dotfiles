@@ -178,8 +178,6 @@ new_window pixel
 
 # desktop bg
 exec feh --bg-scale ~/Pictures/bg.jpg
-# standby and lockscreen w/ $mod+Shift+v and $mod+Shift+Esc
-bindsym $mod+Shift+Escape exec '~/bin/lock' 
 # autolock after 15 minutes
 exec xautolock -time 15 -locker '~/bin/lock' &
 # for wlan etc.
