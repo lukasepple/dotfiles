@@ -3,18 +3,19 @@ autoload -U compinit
 compinit
 setopt completealiases
 
+# go
+export GOPATH="$HOME/Hacking/go/"
+
 # PATH
 if [[ $(uname) = "Darwin" ]]; then
-	export PATH="/usr/local/bin:$HOME/bin:${PATH}:$HOME/Hacking/go/bin" # Homebrew, go
+	export PATH="/usr/local/bin:$HOME/bin:${PATH}:$GOPATH/go/bin" # Homebrew, go
 else
-	export PATH="$HOME/bin:${PATH}:$HOME/Hacking/go/gopath/bin"
+	export PATH="$HOME/bin:${PATH}:$GOPATH/bin"
 fi
 #Applications
 export EDITOR="vim"
 export BROWSER="dwb"
 
-# go
-export GOPATH="$HOME/Hacking/go/gopath"
 # Prompt
 
 autoload -U promptinit
@@ -22,7 +23,7 @@ autoload -U colors && colors
 #export PROMPT="
 #%{$fg[yellow]%}%n %{$fg[white]%}on %{$fg[yellow]%}%m %{$fg[white]%}in %{$fg[blue]%}%~ 
 #> %{$fg[white]%} "
-export PROMPT="%B%{$fg[yellow]%}-%{$fg[white]%}%b "
+export PROMPT="%B%(?,,%F{red}(╯°o°）╯ ┻━┻ )%f%{$fg[yellow]%}-%{$fg[white]%}%b "
 export RPROMPT="%~"
 
 #CLICOLOR
