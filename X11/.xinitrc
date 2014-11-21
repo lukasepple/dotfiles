@@ -15,6 +15,9 @@ setxkbmap -option caps:escape
 #redshift!!!
 redshift -l 48.3718:10.8926 &
 
+# spacenotify
+spacenotify.py --watch &
+
 function start_2bwm () {
 cd ~
 # cursor
@@ -40,5 +43,4 @@ function start_hlwm() {
 exec herbstluftwm --locked
 }
 
-#start_hlwm
 start_i3
