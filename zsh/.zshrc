@@ -8,7 +8,7 @@ export GOPATH="$HOME/Hacking/go/"
 
 # PATH
 if [[ $(uname) = "Darwin" ]]; then
-	export PATH="/usr/local/bin:$HOME/bin:${PATH}:$GOPATH/go/bin" # Homebrew, go
+	export PATH="/usr/local/bin:$HOME/bin:${PATH}:$GOPATH/bin" # Homebrew, go
 else
 	export PATH="$HOME/bin:${PATH}:$GOPATH/bin"
 fi
