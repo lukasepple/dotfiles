@@ -22,7 +22,7 @@ URxvt.borderless:       true
 URxvt.background:       #000000
 URxvt.foreground:       #BEBEBE
 URxvt.font:             xft:monoOne:pixelsize=14
-URxvt.perl-lib:         /usr/lib/urxvt/perl/
+URxvt.perl-lib:         /home/lukas/Hacking/builds/urxvt-perls/
 URxvt.colorUL:          #4682B4
 URxvt.perl-ext-common:  default,confirm-paste,url-select,clipboard
 !URLs
