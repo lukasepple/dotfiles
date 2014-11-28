@@ -11,7 +11,7 @@
 "amixer set Master 5-"
     XF86AudioLowerVolume
 
-"amixer set Master 0"
+"amixer sset Master toggle"
     XF86AudioMute
 "chromium"
     XF86HomePage
