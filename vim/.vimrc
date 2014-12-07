@@ -27,9 +27,9 @@ call plug#end()
 let mapleader = ","
 
 "toggle line numbers
-nmap \l :setlocal number!<CR>
+nmap <Leader>n :setlocal number!<CR>
 "toggle paste mode
-nmap \o :set paste!<CR>
+nmap <Leader>o :set paste!<CR>
 
 "natural navigating
 nmap j gj
@@ -40,6 +40,8 @@ nmap <C-p> :bprev<CR>
 "CrtlP
 nmap <Leader>b :CtrlPBuffer<CR>
 nmap <Leader><Leader> :CtrlP<CR>
+"clisp exploration
+nmap <Leader>l :!clisp -i ~/.clisprc.lisp -repl %<CR>
 
 "Color
 set background=dark
