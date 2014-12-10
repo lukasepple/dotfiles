@@ -15,8 +15,9 @@ Plug 'tpope/vim-sensible'
 Plug 'chriskempson/base16-vim'
 Plug 'godlygeek/csapprox'
 Plug 'plasticboy/vim-markdown'
-Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/syntastic'
+Plug 'vim-scripts/AutoClose'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 """"""""""""""""""
@@ -37,9 +38,6 @@ nmap k gk
 "switch between buffers
 nmap <C-n> :bnext<CR>
 nmap <C-p> :bprev<CR>
-"CrtlP
-nmap <Leader>b :CtrlPBuffer<CR>
-nmap <Leader><Leader> :CtrlP<CR>
 "clisp exploration
 nmap <Leader>l :!clisp -i ~/.clisprc.lisp -repl %<CR>
 
@@ -92,3 +90,7 @@ let g:airline_right_sep = ''
 
 "syntastic
 let g:syntastic_python_python_exec = '/usr/bin/python3'
+
+"CrtlP
+"nmap <Leader>b :CtrlPBuffer<CR>
+"nmap <Leader><Leader> :CtrlP<CR>
