@@ -14,7 +14,8 @@ else
 fi
 #Applications
 export EDITOR="vim"
-export BROWSER="dwb"
+export PAGER="less"
+export BROWSER="chromium"
 
 # Prompt
 
