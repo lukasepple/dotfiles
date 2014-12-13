@@ -179,6 +179,8 @@ new_window pixel
 # desktop bg
 exec feh --bg-scale ~/Pictures/bg.jpg
 # autolock after 15 minutes
-exec xautolock -time 15 -locker '~/bin/lock' &
+exec xautolock -time 15 -locker '/home/lukas/bin/lock' &
+
+bindsym $mod+Escape exec '/home/lukas/bin/lock'
 # for wlan etc.
 exec nm-applet &
