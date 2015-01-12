@@ -21,12 +21,12 @@ URxvt.xftAntialias:     true
 URxvt.borderless:       true
 URxvt.background:       #000000
 URxvt.foreground:       #BEBEBE
-URxvt.font:             xft:monoOne:pixelsize=14
+URxvt.font:             xft:terminus:pixelsize=14
 URxvt.perl-lib:         /home/lukas/Hacking/builds/urxvt-perls/
 URxvt.colorUL:          #4682B4
 URxvt.perl-ext-common:  default,confirm-paste,url-select,clipboard
 !URLs
-URxvt.url-select.launcher:  chromium
+URxvt.url-select.launcher:  xdg-open
 URxvt.url-select.underline: true
 !Paste
 URxvt.keysym.M-u:                   perl:url-select:select_next
@@ -35,6 +35,6 @@ URxvt.keysym.M-v:                   perl:clipboard:paste
 URxvt.keysym.M-C-v:                 perl:clipboard:paste_escaped
 URxvt.iso14755_52:                  false
 
-! Don't print the screen out via lpr when I accidentially hit PrntScr
+! no printing via PrntScr
 URxvt.print-pipe: "cat > /dev/null"
 
