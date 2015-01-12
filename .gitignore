@@ -2,3 +2,5 @@ vim/.vim/.netrwhist
 
 newsbeuter/.newsbeuter/cache.db
 newsbeuter/.newsbeuter/history.*
+vim/.vim/autoload/plug.vim.old
+vim/.vim/plugged/
