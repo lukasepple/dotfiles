@@ -177,7 +177,7 @@ client.urgent           #870000 #870000 #ffffff #870000
 new_window pixel
 
 # desktop bg
-exec feh --bg-scale ~/Pictures/bg.jpg
+exec feh --bg-max ~/Pictures/Solarsystem/Kepler_16b_20x_30.jpg\?1418689026
 # autolock after 15 minutes
 exec xautolock -time 15 -locker '/home/lukas/bin/lock' &
 
