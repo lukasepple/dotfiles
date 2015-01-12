@@ -26,16 +26,14 @@ nmap <Leader>p :set paste!<CR>
 nmap <Leader><Leader> :CtrlP ~<CR>
 nmap <Leader>c :CtrlP<CR>
 nmap <Leader>b :CtrlPBuffer<CR>
-"buffer closing
-nmap <Leader>k :bdelete<CR>
 "natural navigating
 nmap j gj
 nmap k gk
 
-"switch between buffers
-nmap <C-n> :bnext<CR>
-nmap <C-p> :bprev<CR>
-nmap <C-c> :bdelete<CR>
+" buffer management
+nmap <Leader>l :bnext<CR>
+nmap <Leader>h :bprev<CR>
+nmap <Leader>d :bdelete<CR>
 
 " window movement
 " tmux/screen like behavior
@@ -63,13 +61,13 @@ set autoread
 
 " Indentation
 set breakindent
-set noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
+"set noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
 
-nmap <Leader>h :set expandtab tabstop=2 shiftwidth=2 softtabstop=2<CR>
+nmap <Leader>s :set expandtab tabstop=2 shiftwidth=2 softtabstop=2<CR>
 nmap <Leader>t :set noexpandtab tabstop=4 shiftwidth=4 softtabstop=4<CR
 
-" line completion
-imap <C-e> <C-x><C-l>
+" completion
+" use C-n!!
 
 " plugin configuration
 source ~/.vim/plugins
