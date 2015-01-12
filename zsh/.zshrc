@@ -18,7 +18,6 @@ export PAGER="less"
 export BROWSER="chromium"
 
 # Prompt
-
 autoload -U promptinit
 autoload -U colors && colors
 #export PROMPT="
@@ -49,9 +48,8 @@ alias very=git
 alias wow='git status'
 
 source $HOME/.zsh_helpers/mark
-source $HOME/.zsh_helpers/k/k.sh
 
-# new nano uberspace
-alias nnano=$HOME/bin/nano
+bindkey -v
+bindkey '^R' history-incremental-search-backward
 
-
+doge
