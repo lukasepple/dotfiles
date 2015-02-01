@@ -5,12 +5,13 @@ setopt completealiases
 
 # go
 export GOPATH="$HOME/Hacking/go/"
+export BUILDTOOLPATH="$GOPATH/bin:$HOME/.cabal/bin:$HOME/.gem/ruby/2.2.0/bin"
 
 # PATH
 if [[ $(uname) = "Darwin" ]]; then
-	export PATH="/usr/local/bin:$HOME/bin:${PATH}:$GOPATH/bin" # Homebrew, go
+	export PATH="/usr/local/bin:$HOME/bin:${PATH}:${BUILDTOOLPATH}" # Homebrew, go
 else
-	export PATH="$HOME/bin:${PATH}:$GOPATH/bin"
+	export PATH="$HOME/bin:${PATH}:${BUILDTOOLPATH}"
 fi
 #Applications
 export EDITOR="vim"
@@ -30,8 +31,8 @@ export RPROMPT="%~"
 export CLICOLOR="true"
 
 # History
-HISTSIZE=10000
-SAVEHIST=1000
+HISTSIZE=10000000000
+SAVEHIST=10000000000
 HISTFILE=~/.history
 
 # Helpers
