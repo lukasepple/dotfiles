@@ -11,6 +11,9 @@ Plug 'scrooloose/syntastic'
 Plug 'epeli/slimux'
 Plug 'tpope/vim-sleuth'
 Plug 'kien/ctrlp.vim'
+Plug 'Shougo/vimproc', {'do' : 'make' }
+Plug 'raichoo/haskell-vim', {'for' : 'haskell'}
+Plug 'eagletmt/ghcmod-vim', {'for' : 'haskell'}
 call plug#end()
 
 " completion
@@ -38,6 +41,11 @@ nmap <Leader>d :bdelete<CR>
 " window movement
 " tmux/screen like behavior
 map <C-a> <C-w>
+
+" syntax
+syntax on
+filetyp on
+filetype indent plugin on
 
 "Color
 set background=dark
