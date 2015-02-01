@@ -1,4 +1,5 @@
 https://bbs.archlinux.de/extern.php?action=feed&fid=257&type=atom&order=posted&show=6
+http://feeds.feedburner.com/GamezNinja?format=xml
 http://blog.redlinernotes.com/rss.xml
 https://github.com/voidlinux/void-packages/commits/master.atom
 http://blog.todamax.net/feed/
@@ -50,7 +51,6 @@ http://blog.michiwend.com/feed/
 http://blog.osuv.de/rss.php
 http://blog.nullspace.io/feed.xml
 http://fnordig.de/feed.xml
-http://unkonstruktiv.de/rss
 http://grandhotelcosmopolis.wordpress.com/feed/
 https://log.koehr.in/feed.rss
 http://lolnein.com/feed/
@@ -66,9 +66,11 @@ http://woleonard.wordpress.com/feed/
 http://xkcd.com/rss.xml
 http://xsteadfastx.org/feed/
 http://xsteadfastx.github.io/blog/feeds/all.atom.xml
-http://www.blogbleistift.de/rss
+http://blog.duangle.com/feeds/posts/default
 http://theresa.someserver.de/blog/?feed=rss2
 http://telekommunisten.net/
 https://www.imperialviolet.org/
 http://www.clcomic.com/feed
 http://www.voidlinux.eu/atom.xml
+http://starboundering.tumblr.com/rss
+http://11k2.wordpress.com/feed/
