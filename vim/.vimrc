@@ -26,8 +26,7 @@ nmap <Leader>n :setlocal number!<CR>
 "toggle paste mode
 nmap <Leader>p :set paste!<CR>
 " fuzzy finding
-nmap <Leader><Leader> :CtrlP ~<CR>
-nmap <Leader>c :CtrlP<CR>
+nmap <Leader><Leader> :CtrlP<CR>
 nmap <Leader>b :CtrlPBuffer<CR>
 "natural navigating
 nmap j gj
@@ -37,10 +36,6 @@ nmap k gk
 nmap <Leader>l :bnext<CR>
 nmap <Leader>h :bprev<CR>
 nmap <Leader>d :bdelete<CR>
-
-" window movement
-" tmux/screen like behavior
-map <C-a> <C-w>
 
 " syntax
 syntax on
@@ -69,13 +64,10 @@ set autoread
 
 " Indentation
 set breakindent
-"set noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
+set noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 nmap <Leader>s :set expandtab tabstop=2 shiftwidth=2 softtabstop=2<CR>
 nmap <Leader>t :set noexpandtab tabstop=4 shiftwidth=4 softtabstop=4<CR
-
-" completion
-" use C-n!!
 
 " plugin configuration
 source ~/.vim/plugins
