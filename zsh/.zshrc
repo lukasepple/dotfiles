@@ -48,8 +48,6 @@ alias such=git
 alias very=git
 alias wow='git status'
 
-source $HOME/.zsh_helpers/mark
-
 bindkey -v
 bindkey '^R' history-incremental-search-backward
 
