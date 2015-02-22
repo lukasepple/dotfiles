@@ -182,5 +182,5 @@ exec feh --bg-max ~/Pictures/gravity_ksp_wallpaper.png
 exec xautolock -time 15 -locker '/home/lukas/bin/lock' &
 
 bindsym $mod+Escape exec '/home/lukas/bin/lock'
-# for wlan etc.
-exec nm-applet &
+
+exec cbatticon &
