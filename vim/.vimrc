@@ -64,7 +64,7 @@ set autoread
 
 " Indentation
 set breakindent
-set noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
+"set noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
 
 nmap <Leader>s :set expandtab tabstop=2 shiftwidth=2 softtabstop=2<CR>
 nmap <Leader>t :set noexpandtab tabstop=4 shiftwidth=4 softtabstop=4<CR
