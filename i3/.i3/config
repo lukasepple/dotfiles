@@ -153,7 +153,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
-	position top 
+	position top
 	colors{
 		background #000000
 		statusline #ffffff
@@ -162,7 +162,7 @@ bar {
 		inactive_workspace #333333 #333333 #888888
 		urgent_workspace   #870000 #870000 #ffffff
 	}
-	
+
 }
 
 # window style
@@ -177,7 +177,7 @@ client.urgent           #870000 #870000 #ffffff #870000
 new_window pixel
 
 # desktop bg
-exec feh --bg-max ~/Pictures/gravity_ksp_wallpaper.png
+exec feh --bg-max ~/Pictures/wallpaper/engine_maintenance.jpg
 # autolock after 15 minutes
 exec xautolock -time 15 -locker '/home/lukas/bin/lock' &
 
