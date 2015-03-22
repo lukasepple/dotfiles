@@ -8,12 +8,13 @@ Plug 'kien/rainbow_parentheses.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'godlygeek/csapprox'
 Plug 'scrooloose/syntastic'
-Plug 'epeli/slimux'
+"Plug 'epeli/slimux'
 Plug 'tpope/vim-sleuth'
 Plug 'kien/ctrlp.vim'
-Plug 'Shougo/vimproc', {'do' : 'make' }
 Plug 'raichoo/haskell-vim', {'for' : 'haskell'}
-Plug 'eagletmt/ghcmod-vim', {'for' : 'haskell'}
+Plug 'lukerandall/haskellmode-vim', {'for' : 'haskell' }
+"Plug 'tkztmk/vim-vala'
+"Plug 'Shougo/vimproc', {'do' : 'make' }
 call plug#end()
 
 " completion
