@@ -24,7 +24,7 @@ autoload -U colors && colors
 #export PROMPT="
 #%{$fg[yellow]%}%n %{$fg[white]%}on %{$fg[yellow]%}%m %{$fg[white]%}in %{$fg[blue]%}%~ 
 #> %{$fg[white]%} "
-export PROMPT="%B%? %{$fg[yellow]%}-%{$fg[white]%}%b "
+export PROMPT="%B%(?,%F{yellow},%F{red})——————%F{white}%b "
 export RPROMPT="%~"
 
 #CLICOLOR
