@@ -25,10 +25,10 @@ browser = rainbow-lollipop
 cursor = #ffffff
 foreground = #e8e9ca
 foreground_bold = #ffffff
-background = #222222
+#background = #222222
 
 # 20% background transparency (requires a compositor)
-#background = rgba(63, 63, 63, 0.8)
+background = rgba(20,20,20,0.4)
 
 # if unset, will reverse foreground and background
 #highlight = #2f2f2f
