@@ -20,6 +20,14 @@ call plug#end()
 " completion
 set completeopt=menu,preview
 
+" backup
+set noswapfile
+set undofile
+
+set undodir=~/.cache/vim/undo//
+set backupdir=~/.cache/vim/backup//
+set directory=~/.cache/vim/swap//
+
 " keybindings
 let mapleader = ","
 "toggle line numbers
@@ -51,6 +59,7 @@ colorscheme base16-chalk
 set autoindent
 set backspace=indent,eol,start
 set smarttab
+set tabstop=4 shiftwidth=4 softtabstop=4
 
 " search
 set incsearch
