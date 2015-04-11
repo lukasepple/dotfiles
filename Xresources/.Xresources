@@ -1,4 +1,4 @@
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 !                                              !
 !           urxvt - rxvt-unicode               !
 !                                              !
@@ -21,7 +21,8 @@ URxvt.xftAntialias:     true
 URxvt.borderless:       true
 URxvt.background:       #000000
 URxvt.foreground:       #BEBEBE
-URxvt.font:             xft:Inconsolata:pixelsize=15,xft:DeJaVu Mono:pixelsize=14,xft:Unifont:pixelsize=14
+URxvt.font:             xft:Unifont:pixelsize=15
+!URxvt.font:             xft:Smallest Pixel-7:pixelsize=14
 URxvt.perl-lib:         /home/lukas/Hacking/builds/urxvt-perls/
 URxvt.colorUL:          #4682B4
 URxvt.perl-ext-common:  default,confirm-paste,url-select,clipboard
