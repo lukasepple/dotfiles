@@ -86,7 +86,7 @@ set $ws2 2:www
 set $ws3 3:code
 set $ws4 4:social
 set $ws5 5:mail
-set $ws6 6
+set $ws6 6:work
 set $ws7 7
 set $ws8 8
 set $ws9 9
