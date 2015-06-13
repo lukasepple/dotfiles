@@ -22,8 +22,22 @@ feh --bg-scale ~/Pictures/wallpaper/engine_maintenance.jpg
 # some compositing
 compton -cb
 
-exec i3
+start_i3() {
+	exec i3
+}
 
-#sxhkd &
-#termite &
-#exec bspwm
+start_bspwm() {
+	dbus-launch --auto-syntax --exit-with-session bspwm
+	sxhkd &
+
+	cbatticon &
+
+	xsetroot -cursor_name left_ptr
+
+	$HOME/.config/bspwm/bar &
+
+	exec bspwm
+}
+
+#start_bspwm
+start_i3
