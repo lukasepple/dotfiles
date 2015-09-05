@@ -16,11 +16,10 @@ setxkbmap -option caps:escape
 # redshift
 redshift -l 48.3718:10.8926 &
 
-# desktop background
-feh --bg-scale ~/Pictures/wallpaper/engine_maintenance.jpg
+pulseaudio --start
 
-# some compositing
-compton -cb
+# desktop background
+feh --bg-max ~/Pictures/katzen/Emma3.jpg
 
 start_i3() {
 	exec i3
@@ -39,5 +38,4 @@ start_bspwm() {
 	exec bspwm
 }
 
-#start_bspwm
 start_i3
