@@ -8,13 +8,10 @@ Plug 'kien/rainbow_parentheses.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'godlygeek/csapprox'
 Plug 'scrooloose/syntastic'
-"Plug 'epeli/slimux'
 Plug 'tpope/vim-sleuth'
-Plug 'kien/ctrlp.vim'
-Plug 'raichoo/haskell-vim', {'for' : 'haskell'}
-Plug 'lukerandall/haskellmode-vim', {'for' : 'haskell' }
-"Plug 'tkztmk/vim-vala'
-"Plug 'Shougo/vimproc', {'do' : 'make' }
+Plug 'neovimhaskell/haskell-vim', {'for' : 'haskell'}
+Plug 'tpope/vim-speeddating'
+Plug 'jceb/vim-orgmode'
 call plug#end()
 
 " completion
@@ -29,14 +26,11 @@ set backupdir=~/.cache/vim/backup//
 set directory=~/.cache/vim/swap//
 
 " keybindings
-let mapleader = ","
+let mapleader = " "
 "toggle line numbers
 nmap <Leader>n :setlocal number!<CR>
 "toggle paste mode
 nmap <Leader>p :set paste!<CR>
-" fuzzy finding
-nmap <Leader><Leader> :CtrlP<CR>
-nmap <Leader>b :CtrlPBuffer<CR>
 "natural navigating
 nmap j gj
 nmap k gk
