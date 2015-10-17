@@ -1,0 +1,9 @@
+[user]
+	email = git@lukasepple.de
+	name = lukasepple
+[push]
+	default = matching
+[alias]
+	t = log --graph --decorate --oneline
+[pull]
+	rebase = true
