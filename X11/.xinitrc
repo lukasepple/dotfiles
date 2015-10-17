@@ -19,7 +19,10 @@ redshift -l 48.3718:10.8926 &
 pulseaudio --start
 
 # desktop background
-feh --bg-max ~/Pictures/katzen/Emma3.jpg
+# xsetroot -solid '#74C365'
+feh --bg-max ~/Pictures/wallpaper/deepspace-55.jpg
+
+dunst &
 
 start_i3() {
 	exec i3
