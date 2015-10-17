@@ -53,4 +53,14 @@ alias wow='git status'
 bindkey -v
 bindkey '^R' history-incremental-search-backward
 
+# termite current dir
+if [[ $TERM == xterm-termite ]]; then
+	. /etc/profile.d/vte.sh
+	__vte_osc7
+fi
+
+eval `opam config env`
+
 doge
+
+alias clear='echo nope'
