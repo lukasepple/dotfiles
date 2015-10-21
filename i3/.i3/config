@@ -11,9 +11,8 @@ set $mod Mod4
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-#font pango:monoOne 10
-font pango:Tewi 9
-# font pango:DejaVu Sans Mono 10
+#font pango:Inconsolata 10
+font pango:Source Code Pro 9
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -85,7 +84,7 @@ bindsym $mod+a focus parent
 set $ws1 1:sh
 set $ws2 2:www
 set $ws3 3:code
-set $ws4 4:social
+set $ws4 4:chat
 set $ws5 5:mail
 set $ws6 6:work
 set $ws7 7
@@ -173,12 +172,9 @@ client.focused_inactive #333333 #5f676a #ffffff #484e50
 client.unfocused        #333333 #222222 #888888 #292d2e
 client.urgent           #870000 #870000 #ffffff #870000
 
-# no border
 new_window pixel
 
-# autolock after 15 minutes
 exec xautolock -time 15 -locker '/home/lukas/bin/lock' &
-
 bindsym $mod+Escape exec '/home/lukas/bin/lock'
 
 exec cbatticon &
