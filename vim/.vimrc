@@ -7,12 +7,16 @@ Plug 'junegunn/goyo.vim'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'godlygeek/csapprox'
-Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-sleuth'
 Plug 'neovimhaskell/haskell-vim', {'for' : 'haskell'}
 Plug 'tpope/vim-speeddating'
 Plug 'jceb/vim-orgmode'
+Plug 'asciidoc/vim-asciidoc'
+Plug 'vim-scripts/n3.vim'
 call plug#end()
+
+" encoding
+set encoding=utf-8
 
 " completion
 set completeopt=menu,preview
@@ -32,22 +36,32 @@ nmap <Leader>n :setlocal number!<CR>
 "toggle paste mode
 nmap <Leader>p :set paste!<CR>
 "natural navigating
-nmap j gj
-nmap k gk
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
+
 
 " buffer management
-nmap <Leader>l :bnext<CR>
-nmap <Leader>h :bprev<CR>
 nmap <Leader>d :bdelete<CR>
+nnoremap <silent> <Tab> :bnext<CR>
+nnoremap <silent> <S-Tab> :bprevious<CR>
 
 " syntax
 syntax on
 filetyp on
 filetype indent plugin on
 
+" code style
+set textwidth=80 colorcolumn=+1
+set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮,trail:.
+
+
+nnoremap <leader>l :set list!<CR>
+
 "Color
 set background=dark
-colorscheme base16-chalk
+colorscheme base16-monokai
 
 " nice defaults
 set autoindent
@@ -60,16 +74,13 @@ set incsearch
 set ignorecase
 set smartcase
 
-" encoding
-set encoding=utf-8
-
 " reload files
 set autoread
 
 " Indentation
 set breakindent
-"set noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
 
+"set noexpandtab tabstop=4 shiftwidth=4 softtabstop=4
 nmap <Leader>s :set expandtab tabstop=2 shiftwidth=2 softtabstop=2<CR>
 nmap <Leader>t :set noexpandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>
 
