@@ -14,9 +14,11 @@ xbindkeys
 setxkbmap -option caps:escape
 
 # redshift
-redshift -l 48.3718:10.8926 &
+redshift -l 48.3718:10.8926 -t 5500K:2500K &
 
 pulseaudio --start
+
+xsetroot -cursor_name arrow
 
 # desktop background
 # xsetroot -solid '#74C365'
