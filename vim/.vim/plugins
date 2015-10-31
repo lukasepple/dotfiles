@@ -1,10 +1,12 @@
+au BufNewFile,BufRead *.lmx set filetype=xml
+
 "vim-airline
 "Fixes
 set laststatus=2
 set noshowmode
 
 let g:airline_detect_paste=1
-let g:airline_theme='wombat'
+let g:airline_theme='raven'
 
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
@@ -14,10 +16,13 @@ let g:airline_right_sep = ''
 let g:syntastic_python_python_exec = '/usr/bin/python3'
 
 "rainbow!
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
+" dumb checking for RainbowParentheses
+if exists("*RainbowParenthesesToggle")
+	au VimEnter * RainbowParenthesesToggle
+	au Syntax * RainbowParenthesesLoadRound
+	au Syntax * RainbowParenthesesLoadSquare
+	au Syntax * RainbowParenthesesLoadBraces
+endif
 
 let g:rbpt_colorpairs = [
 	\ ['brown',       'RoyalBlue3'],
