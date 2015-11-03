@@ -12,6 +12,8 @@ xbindkeys
 
 # Escape instead of caps lock!
 setxkbmap -option caps:escape
+# Disable Mouse 3
+xmodmap -e "pointer = 1 25 3 4 5 6 7 8 9" 
 
 # redshift
 redshift -l 48.3718:10.8926 -t 5500K:2500K &
