@@ -61,6 +61,8 @@ fi
 
 eval `opam config env`
 
-doge
+# doge
 
-alias clear='echo nope'
+if [[ -e ~/ORGA ]]; then
+	tasks
+fi;
