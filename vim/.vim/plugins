@@ -17,7 +17,7 @@ let g:syntastic_python_python_exec = '/usr/bin/python3'
 
 "rainbow!
 " dumb checking for RainbowParentheses
-if exists("*RainbowParenthesesToggle")
+if exists("RainbowParenthesesToggle")
 	au VimEnter * RainbowParenthesesToggle
 	au Syntax * RainbowParenthesesLoadRound
 	au Syntax * RainbowParenthesesLoadSquare

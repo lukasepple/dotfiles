@@ -13,6 +13,9 @@ Plug 'tpope/vim-speeddating'
 Plug 'jceb/vim-orgmode'
 Plug 'asciidoc/vim-asciidoc'
 Plug 'vim-scripts/n3.vim'
+Plug 'idris-hackers/idris-vim'
+Plug 'LnL7/vim-nix'
+Plug 'rust-lang/rust.vim'
 call plug#end()
 
 " encoding
@@ -20,6 +23,10 @@ set encoding=utf-8
 
 " completion
 set completeopt=menu,preview
+
+" saving
+set hidden
+au FocusLost * :wa
 
 " backup
 set noswapfile
@@ -54,6 +61,7 @@ filetype indent plugin on
 
 " code style
 set textwidth=80 colorcolumn=+1
+nmap <Leader>w :set textwidth=0<CR>
 set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮,trail:.
 
 
