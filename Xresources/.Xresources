@@ -38,4 +38,3 @@ URxvt.iso14755_52:                  false
 
 ! no printing via PrntScr
 URxvt.print-pipe: "cat > /dev/null"
-

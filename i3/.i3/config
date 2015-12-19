@@ -178,3 +178,5 @@ exec xautolock -time 15 -locker '/home/lukas/bin/lock' &
 bindsym $mod+Escape exec '/home/lukas/bin/lock'
 
 exec cbatticon &
+
+exec xsetroot -cursor_name heart &

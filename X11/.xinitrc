@@ -20,8 +20,6 @@ redshift -c ~/.redshift &
 
 pulseaudio --start
 
-xsetroot -cursor_name arrow
-
 # desktop background
 # xsetroot -solid '#74C365'
 feh --bg-max ~/Pictures/wallpaper/deepspace-55.jpg

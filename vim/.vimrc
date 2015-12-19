@@ -5,7 +5,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'bling/vim-airline'
 Plug 'junegunn/goyo.vim'
 Plug 'kien/rainbow_parentheses.vim'
-Plug 'chriskempson/base16-vim'
 Plug 'godlygeek/csapprox'
 Plug 'tpope/vim-sleuth'
 Plug 'neovimhaskell/haskell-vim', {'for' : 'haskell'}
@@ -60,8 +59,7 @@ filetyp on
 filetype indent plugin on
 
 " code style
-set textwidth=80 colorcolumn=+1
-nmap <Leader>w :set textwidth=0<CR>
+nmap <Leader>w :set textwidth=80 colorcolumn=+1<CR>
 set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮,trail:.
 
 
@@ -69,13 +67,12 @@ nnoremap <leader>l :set list!<CR>
 
 "Color
 set background=dark
-colorscheme base16-monokai
-
+colorscheme twilight
 " nice defaults
 set autoindent
 set backspace=indent,eol,start
 set smarttab
-set tabstop=4 shiftwidth=4 softtabstop=4
+set expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 " search
 set incsearch
