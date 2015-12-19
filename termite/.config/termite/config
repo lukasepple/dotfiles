@@ -13,8 +13,7 @@ search_wrap = true
 cursor_blink = off
 cursor_shape = block
 
-#browser = rainbow-lollipop
-browser = chromium
+browser = firefox
 
 
 # set size hints for the window

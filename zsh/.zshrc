@@ -16,7 +16,7 @@ fi
 #Applications
 export EDITOR="vim"
 export PAGER="less"
-export BROWSER="rainbow-lollipop"
+export BROWSER="firefox"
 
 # Prompt
 autoload -U promptinit
