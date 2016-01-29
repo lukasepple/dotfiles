@@ -40,7 +40,7 @@ alias ls="ls --color=auto"
 alias ll="ls -lha"
 alias uberspace="mosh -p 64374 lukase@lukasepple.de"
 alias tma='tmux attach -d -t'
-alias doch='sudo $(fc -ln -1)'
+alias doch='sudo !!'
 alias na='netctl-auto'
 # git
 alias g=git
