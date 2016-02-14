@@ -2,7 +2,8 @@
 
 "plug.vim
 call plug#begin('~/.vim/plugged')
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/goyo.vim'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'godlygeek/csapprox'
