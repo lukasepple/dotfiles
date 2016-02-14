@@ -14,7 +14,7 @@ import           XMonad.Util.SpawnOnce               (spawnOnce)
 
 main = xmonad . ewmh $ configuration
 
-configuration = defaultConfig
+configuration = def
   { modMask            = mod4Mask
   , terminal           = term
   , layoutHook         = layout

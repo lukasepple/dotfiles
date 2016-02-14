@@ -11,7 +11,7 @@ import System.Taffybar.FreedesktopNotifications
 import System.Taffybar.WorkspaceSwitcher
 
 main = do
-  let clock = textClockNew Nothing ("<span fgcolor='" ++ cs2s Brown ++ "'>%a %b %_d </span><span fgcolor='" ++ cs2s Yellow ++ "'>%H:%M</span>") 1
+  let clock = textClockNew Nothing "%F %H:%M:%S" 1
       wss = wspaceSwitcherNew =<< pagerNew defaultPagerConfig
       note = notifyAreaNew defaultNotificationConfig
       mpris = mprisNew defaultMPRISConfig
