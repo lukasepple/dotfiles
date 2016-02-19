@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [ "$1" == "on" ]; then
+	setxkbmap lv && xmodmap ~/tmp/neo_de.xmodmap && xset -r 51
+else
+	setxkbmap de && xset r 51
+fi;
