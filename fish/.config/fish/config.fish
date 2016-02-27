@@ -1,5 +1,5 @@
 set -x BROWSER chromium
-set -x PAGER less
+set -x PAGER "less -R"
 set -x EDITOR vim
 
 set -e fish_greeting
