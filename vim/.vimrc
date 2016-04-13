@@ -47,7 +47,8 @@ nnoremap j gj
 nnoremap k gk
 vnoremap j gj
 vnoremap k gk
-
+noremap <Up> gk
+noremap <Down> gj
 
 " buffer management
 nmap <Leader>d :bdelete<CR>
