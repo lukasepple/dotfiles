@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+# This name is easy to rememper and type on neo and querty:
+# Start/Setup A Haskell Environment -> sahe
+
+# Commandline Arguments:
+#   $1: Attribute name of License, defaults to `mit`.
+#   $2: Filename to copy the nix file to instead of running nix-shell (optional)
+
+license=${1-mit}
+filename=$(mktemp)
+
+nix-shell -p cabal2nix --run 'cabal2nix --shell .' > $filename
+
+# $1: String in front that stays the same
+# $2: String behind that is replaced
+# $3: String behind that it is replaced with
+function replace () {
+    sed --in-place "s@${1}${2}@${1}${3}@" $filename
+}
+
+replace "licenses." "unfree" "$license"
+replace "f = { " "" "cabal-install, "
+replace "buildDepends = " "\[ " "%% cabal-install "
+replace "buildDepends = \[" "" " cabal-install"
+replace "libraryHaskellDepends = " "\[ " "%% cabal-install "
+replace "libraryHaskellDepends = \[" "" " cabal-install"
+replace "" "%%" "\["
+
+if [[ $2 ]]; then
+    cp $filename $2
+else
+    nix-shell $filename
+fi
+
+rm $filename

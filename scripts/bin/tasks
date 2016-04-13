@@ -1,0 +1,15 @@
+#!/bin/sh
+function taskcount() {
+    grep '^\* ' "$1" | wc -l
+}
+
+printf '\033[4m'
+date '+%A, %d.%m.%Y'
+printf '\033[0m'
+
+echo -e -n "Spaßige Dinge: \033[1m$(taskcount ~/ORGA/NICE.org)\033[0m "
+echo -e "| Erledigungsbedürftige Dinge: \033[1m$(taskcount ~/ORGA/TODO.org)\033[0m"
+echo -e "Noch \033[1m$(taskcount ~/ORGA/AGENDA.org)\033[0m Agendapunkte! Nächster:\033[36;1m"
+grep '^\* ' ~/ORGA/AGENDA.org | head -n 1
+
+printf '\033[0m'

@@ -1,0 +1,2 @@
+#!/bin/sh
+cabal2nix --shell . > ./shell.nix
