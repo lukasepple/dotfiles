@@ -33,6 +33,6 @@ cryptsetup luksOpen "$BACKUP_DRIVE" "$MAPPER" || die "Could not open LUKS disk"
 
 mount "/dev/mapper/$MAPPER" "$MOUNTPOINT" || die "Could not mount disk"
 
-rdup-simple +90 -v -E /home/lukas/backup-excludes /etc/nixos/configuration.nix /home/lukas "$MOUNTPOINT/fliewatuet" || die "Could not create backup"
+rdup-simple +90 -v -E /home/lukas/backup-excludes /etc/nixos/configuration.nix /home/lukas "$MOUNTPOINT/$(hostname)" || die "Could not create backup"
 
 cleanup
