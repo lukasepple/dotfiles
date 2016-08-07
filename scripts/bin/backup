@@ -1,0 +1,38 @@
+#!/bin/sh
+BACKUP_DRIVE="$1"
+MAPPER="backup"
+MOUNTPOINT="/mnt/backup"
+
+die() {
+  echo "$1" >> /dev/stderr
+
+  cleanup
+
+  exit 1
+}
+
+cleanup() {
+  sync
+
+  if mountpoint -q "$MOUNTPOINT"; then
+    umount "$MOUNTPOINT"
+  fi
+
+  if [[ -e "/dev/mapper/$MAPPER" ]]; then
+    cryptsetup luksClose "$MAPPER"
+  fi
+}
+
+if [[ ! ( -e "$BACKUP_DRIVE" ) ]]; then
+  die "No such drive: $BACKUP_DRIVE"
+fi
+
+cleanup
+
+cryptsetup luksOpen "$BACKUP_DRIVE" "$MAPPER" || die "Could not open LUKS disk"
+
+mount "/dev/mapper/$MAPPER" "$MOUNTPOINT" || die "Could not mount disk"
+
+rdup-simple +90 -v -E /home/lukas/backup-excludes /etc/nixos/configuration.nix /home/lukas "$MOUNTPOINT/fliewatuet" || die "Could not create backup"
+
+cleanup
