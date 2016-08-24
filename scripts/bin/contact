@@ -1,0 +1,2 @@
+#!/bin/sh
+awk 'BEGIN { RS = "###" } /'"$*"'/' "$HOME/files/ORGA/contacts"
