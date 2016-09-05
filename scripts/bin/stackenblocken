@@ -1,3 +1,0 @@
-#!/bin/sh
-mpv --no-terminal "$HOME/music/stackenblocken_jingle.mp3" &
-sudo nix-collect-garbage -d
