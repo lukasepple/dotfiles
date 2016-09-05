@@ -1,6 +1,6 @@
 set -x BROWSER chromium
 set -x PAGER "less -R"
-set -x EDITOR vim
+set -x EDITOR nvim
 set -x DOTREMINDERS $HOME/files/orga/reminders
 
 set -e fish_greeting
