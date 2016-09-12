@@ -1,17 +1,20 @@
 #!/bin/sh
 BACKUP_DRIVE="$1"
+COMMAND="$2"
 MAPPER="backup"
 MOUNTPOINT="/mnt/backup"
+
+REPO="$MOUNTPOINT/fliewatuet.attic"
 
 die() {
   echo "$1" >> /dev/stderr
 
-  cleanup
+  umount
 
   exit 1
 }
 
-cleanup() {
+umount() {
   sync
 
   if mountpoint -q "$MOUNTPOINT"; then
@@ -23,16 +26,51 @@ cleanup() {
   fi
 }
 
+mount() {
+  cryptsetup luksOpen "$BACKUP_DRIVE" "$MAPPER" || die "Could not open LUKS disk"
+
+  mount "/dev/mapper/$MAPPER" "$MOUNTPOINT" || die "Could not mount disk"
+}
+
+backup() {
+  if mountpoint -q "$MOUNTPOINT"; then
+    # rdup-simple +90 -v -E /home/lukas/backup-excludes /etc/nixos/configuration.nix /home/lukas "$MOUNTPOINT/$(hostname)" || die "Could not create backup"
+
+    attic create -v --stats "$REPO::fliewatuet-$(date +%Y-%m-%d-%H-%M)" --exclude-from /home/lukas/backup-excludes /etc/nixos/ /home/lukas
+
+    attic prune -v $REPOSITORY --keep-daily=14 --keep-weekly=8 --keep-monthly=12
+  else
+    die "Disk not mounted at: $MOUNTPOINT"
+  fi
+}
+
 if [[ ! ( -e "$BACKUP_DRIVE" ) ]]; then
   die "No such drive: $BACKUP_DRIVE"
 fi
 
-cleanup
+if [[ -n "$COMMAND" ]]; then
+  case "$COMMAND" in
+    "mount")
+      mount
+      ;;
+    "umount")
+      umount
+      ;;
+    "backup")
+      backup
+      ;;
+    *)
+      die "No such command: $COMMAND"
+      ;;
+  esac
 
-cryptsetup luksOpen "$BACKUP_DRIVE" "$MAPPER" || die "Could not open LUKS disk"
 
-mount "/dev/mapper/$MAPPER" "$MOUNTPOINT" || die "Could not mount disk"
+else
+  umount
 
-rdup-simple +90 -v -E /home/lukas/backup-excludes /etc/nixos/configuration.nix /home/lukas "$MOUNTPOINT/$(hostname)" || die "Could not create backup"
+  mount
 
-cleanup
+  backup
+
+  umount
+fi
