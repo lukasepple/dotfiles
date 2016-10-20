@@ -38,7 +38,7 @@ background = #000000
 # colors from color0 to color254 can be set
 
 # Black
-color0  = #222222 
+color0  = #222222
 # Red
 color1  = #8b3e2f
 # Green
