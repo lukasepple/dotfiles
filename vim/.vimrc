@@ -10,12 +10,13 @@ Plug 'godlygeek/csapprox'
 Plug 'tpope/vim-sleuth'
 Plug 'neovimhaskell/haskell-vim', {'for' : 'haskell'}
 Plug 'tpope/vim-speeddating'
-Plug 'jceb/vim-orgmode'
+"Plug 'jceb/vim-orgmode'
 Plug 'asciidoc/vim-asciidoc'
 Plug 'vim-scripts/n3.vim'
 Plug 'idris-hackers/idris-vim'
 Plug 'LnL7/vim-nix'
 Plug 'rust-lang/rust.vim'
+Plug 'leafgarland/typescript-vim'
 call plug#end()
 
 " encoding
