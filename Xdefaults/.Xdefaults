@@ -22,19 +22,14 @@ URxvt.borderless:       true
 URxvt.background:       #000000
 URxvt.foreground:       #BEBEBE
 URxvt.font:             xft:Unifont:pixelsize=15
-!URxvt.font:             xft:Smallest Pixel-7:pixelsize=14
-URxvt.perl-lib:         /home/lukas/Hacking/builds/urxvt-perls/
 URxvt.colorUL:          #4682B4
 URxvt.perl-ext-common:  default,confirm-paste,url-select,clipboard
-!URLs
-URxvt.url-select.launcher:  xdg-open
+URxvt.url-select.launcher: chromium
 URxvt.url-select.underline: true
-!Paste
-URxvt.keysym.M-u:                   perl:url-select:select_next
-URxvt.keysym.M-c:                   perl:clipboard:copy
-URxvt.keysym.M-v:                   perl:clipboard:paste
-URxvt.keysym.M-C-v:                 perl:clipboard:paste_escaped
-URxvt.iso14755_52:                  false
+URxvt.keysym.Shift-Control-U:                   perl:url-select:select_next
+URxvt.keysym.Shift-Control-C:                   perl:clipboard:copy
+URxvt.keysym.Shift-Control-V:                   perl:clipboard:paste
+URxvt.iso14755:                    false
 
 ! no printing via PrntScr
 URxvt.print-pipe: "cat > /dev/null"
