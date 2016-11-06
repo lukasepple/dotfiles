@@ -1,0 +1,21 @@
+#!/bin/sh
+
+font="-*-fixed-medium-*-*-*-12-*-*-*-*-*-*-*"
+panel_heigth=18
+monitor="$1"
+
+battery_path="/sys/class/power_supply/BAT0"
+
+herbstclient pad "$monitor" "$panel_heigth"
+
+while true; do
+    date="$(date '+%Y-%m-%d %H:%M:%S')"
+    battery="$(cat "$battery_path/status"): $(cat "$battery_path/capacity")%"
+
+    # network
+
+    inet=""
+
+    echo "$date | $battery"
+    sleep 1
+done 2>/dev/null | lemonbar -g "x$panel_heigth+0+0" -p -f "$font"

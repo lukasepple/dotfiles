@@ -1,2 +1,5 @@
 #!/bin/sh
-notify-send "xmpp" "IM received"
+if [[ $3 != "connect" ]]; then
+    notify-send "xmpp" "IM received"
+    printf '\a'
+fi
