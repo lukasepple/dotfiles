@@ -22,23 +22,22 @@ umount() {
   fi
 
   if [[ -e "/dev/mapper/$MAPPER" ]]; then
-    cryptsetup luksClose "$MAPPER"
+    cryptsetup close --type luks "$MAPPER"
   fi
 }
 
 mount() {
-  cryptsetup luksOpen "$BACKUP_DRIVE" "$MAPPER" || die "Could not open LUKS disk"
+  cryptsetup open --type luks "$BACKUP_DRIVE" $MAPPER || die "Could not open LUKS disk"
 
   mount "/dev/mapper/$MAPPER" "$MOUNTPOINT" || die "Could not mount disk"
 }
 
 backup() {
   if mountpoint -q "$MOUNTPOINT"; then
-    # rdup-simple +90 -v -E /home/lukas/backup-excludes /etc/nixos/configuration.nix /home/lukas "$MOUNTPOINT/$(hostname)" || die "Could not create backup"
 
     attic create -v --stats "$REPO::fliewatuet-$(date +%Y-%m-%d-%H-%M)" --exclude-from /home/lukas/backup-excludes /etc/nixos/ /home/lukas
 
-    attic prune -v $REPOSITORY --keep-daily=14 --keep-weekly=8 --keep-monthly=12
+    attic prune -v "$REPO" --keep-daily=14 --keep-weekly=8 --keep-monthly=12
   else
     die "Disk not mounted at: $MOUNTPOINT"
   fi
