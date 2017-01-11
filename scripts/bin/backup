@@ -1,7 +1,7 @@
 #!/bin/sh
 BACKUP_DRIVE="$1"
 COMMAND="$2"
-MAPPER="backup"
+MAPPER="backup-crypted"
 MOUNTPOINT="/mnt/backup"
 
 REPO="$MOUNTPOINT/fliewatuet.attic"
@@ -35,7 +35,7 @@ mount() {
 backup() {
   if mountpoint -q "$MOUNTPOINT"; then
 
-    attic create -v --stats "$REPO::fliewatuet-$(date +%Y-%m-%d-%H-%M)" --exclude-from /home/lukas/backup-excludes /etc/nixos/ /home/lukas
+    attic create -v --stats "$REPO::fliewatuet-$(date +%Y-%m-%d-%H-%M)" --exclude-from /home/lukas/backup-excludes /etc/wpa_supplicant.conf /etc/nixos/ /home/lukas
 
     attic prune -v "$REPO" --keep-daily=14 --keep-weekly=8 --keep-monthly=12
   else

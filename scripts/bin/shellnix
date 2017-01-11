@@ -1,2 +1,7 @@
 #!/bin/sh
-cabal2nix --shell . > ./shell.nix
+test ! -z "$1" || exit 1
+cabal2nix . > "./$1"
+cat > default.nix << EOF
+let pkgs = import <nixpkgs> {};
+in pkgs.haskellPackages.callPackage ./$1 { }
+EOF
