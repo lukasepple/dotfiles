@@ -28,6 +28,9 @@
 "arandr"
    XF86Display
 
+"noot"
+   XF86Tools
+
 ##################################
 # End of xbindkeys configuration #
 ##################################
