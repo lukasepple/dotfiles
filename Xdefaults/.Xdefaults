@@ -20,8 +20,8 @@ URxvt.cursorColor2:     #000000
 URxvt.xftAntialias:     true
 URxvt.borderless:       true
 URxvt.background:       #000000
-URxvt.foreground:       #BEBEBE
-URxvt.font:             xft:Unifont:pixelsize=15
+URxvt.foreground:       #ffffff
+URxvt.font:             xft:Inconsolata:pixelsize=15
 URxvt.colorUL:          #4682B4
 URxvt.perl-ext-common:  default,confirm-paste,url-select,clipboard
 URxvt.url-select.launcher: chromium
