@@ -7,13 +7,12 @@ allow_bold = true
 dynamic_title = true
 urgent_on_bell = true
 clickable_url = true
-font = Inconsolata 12
 scrollback_lines = 10000000
 search_wrap = true
 cursor_blink = off
 cursor_shape = block
 
-browser = chromium
+browser = xdg-open
 
 
 # set size hints for the window
@@ -78,7 +77,7 @@ color15 = #e8e9ca
 #active_background = #3f3f3f
 padding = 2
 #border = #3f3f3f
-#border_width = 0.5
+border_width = 0
 #roundness = 2.0
 
 # vim: ft=dosini cms=#%s
