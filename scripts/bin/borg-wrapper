@@ -1,0 +1,87 @@
+#!/usr/bin/env nix-shell
+#!nix-shell -i bash -p pkgs.borgbackup
+
+BACKUP_DRIVE="$1"
+MAPPER=backup
+MOUNTPOINT=/mnt
+export BORG_REPO=/mnt/fliewatuet-backup
+
+die() {
+  echo "$1" >> /dev/stderr
+
+  exit 1
+}
+
+mount_luks() {
+  echo "Opening LUKS disk"
+
+  cryptsetup open --type luks "$BACKUP_DRIVE" $MAPPER || die "Could not open LUKS disk"
+  echo "Mounting LUKS disk via mapper"
+  mount "/dev/mapper/$MAPPER" "$MOUNTPOINT" || die "Could not mount disk"
+
+}
+
+umount_luks() {
+  sync
+
+  if mountpoint -q "$MOUNTPOINT"; then
+    umount "$MOUNTPOINT"
+  fi
+
+  if [[ -e "/dev/mapper/$MAPPER" ]]; then
+    cryptsetup close --type luks "$MAPPER"
+  fi
+}
+
+
+backup() {
+  if mountpoint -q "$MOUNTPOINT"; then
+    echo "Starting Backup"
+
+    borg create                       \
+      --verbose                       \
+      --filter AME                    \
+      --list                          \
+      --stats                         \
+      --show-rc                       \
+      --compression lz4               \
+      --exclude-caches                \
+      --exclude-from /home/lukas/backup-excludes \
+      ::'{hostname}-{now}'            \
+      /etc/nixos                      \
+      /home                           || die "Backup failed"
+
+    borg prune                        \
+      --list                          \
+      --prefix '{hostname}-'          \
+      --show-rc                       \
+      --keep-daily 7                  \
+      --keep-weekly 4                 \
+      --keep-monthly 6                || die "Pruning failed"
+  else
+    echo "No backup drive mounted"
+  fi
+}
+
+COMMAND="$2"
+
+if [[ -n "$COMMAND" ]]; then
+  case "$COMMAND" in
+    "mount")
+      mount_luks
+      ;;
+    "umount")
+      umount_luks
+      ;;
+    "backup")
+      backup
+      ;;
+    *)
+      die "No such command: $COMMAND"
+      ;;
+  esac
+else
+  mountpoint -q "$MOUNTPOINT" || mount_luks
+  backup
+  umount
+fi
