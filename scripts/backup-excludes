@@ -1,5 +1,7 @@
 /home/lukas/.cache
 /home/lukas/.config/chromium
+/home/lukas/.config/google-chrome
+/home/lukas/.config/discord
 /home/lukas/.stack
 /home/lukas/.notmuch
 /home/lukas/.local/share/
@@ -7,3 +9,8 @@
 /home/lukas/.npm
 /home/lukas/.gem
 /home/lukas/.npm
+/home/lukas/tmp
+/home/lukas/Videos/tmp
+/home/lukas/.mozilla
+/home/lukas/.cabal
+/home/lukas/.bundle
