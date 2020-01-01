@@ -13,6 +13,7 @@ Plug 'LnL7/vim-nix'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'reedes/vim-colors-pencil'
 Plug 'rust-lang/rust.vim'
+Plug 'lambdalisue/suda.vim'
 
 "Plug 'asciidoc/vim-asciidoc'
 "Plug 'idris-hackers/idris-vim'
