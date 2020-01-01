@@ -13,3 +13,5 @@ alias wow='git status'
 alias ll="ls -lha"
 alias tma='tmux attach -d -t'
 alias sd='systemctl'
+
+set -x PATH "$PATH:$HOME/bin"
