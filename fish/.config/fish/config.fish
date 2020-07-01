@@ -13,5 +13,6 @@ alias wow='git status'
 alias ll="ls -lha"
 alias tma='tmux attach -d -t'
 alias sd='systemctl'
+alias prefetch-sha256='nix-prefetch-url --type sha256'
 
 set -x PATH "$PATH:$HOME/bin"
