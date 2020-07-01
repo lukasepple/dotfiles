@@ -83,5 +83,5 @@ if [[ -n "$COMMAND" ]]; then
 else
   mountpoint -q "$MOUNTPOINT" || mount_luks
   backup
-  umount
+  umount_luks
 fi
