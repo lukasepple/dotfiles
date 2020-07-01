@@ -14,7 +14,9 @@ Plug 'neovimhaskell/haskell-vim'
 Plug 'reedes/vim-colors-pencil'
 Plug 'rust-lang/rust.vim'
 Plug 'lambdalisue/suda.vim'
-
+Plug 'kchmck/vim-coffee-script'
+Plug 'vmchale/dhall-vim'
+"Plug 'hylang/vim-hy'
 "Plug 'asciidoc/vim-asciidoc'
 "Plug 'idris-hackers/idris-vim'
 call plug#end()
