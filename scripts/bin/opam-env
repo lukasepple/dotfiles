@@ -1,6 +1,0 @@
-#!/bin/sh
-
-nix-shell -p pkgs.opam \
-  pkgs.m4 pkgs.gnumake pkgs.binutils pkgs.gcc pkgs.gmp pkgs.glib \
-  --command ". $HOME/.opam/opam-init/init.sh; eval \`opam config env\`; return" \
-  -I nixpkgs=$HOME/src/nix/nixpkgs

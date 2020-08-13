@@ -1,3 +1,0 @@
-#!/bin/sh
-finger "$1@graph.no"
-curl "http://wttr.in/$1"

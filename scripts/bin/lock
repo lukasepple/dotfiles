@@ -1,3 +1,0 @@
-#!/bin/sh
-#i3lock -e -d -u -p default -i ~/Pictures/wallpaper/lock.png
-alock -auth pam -bg none -cursor none -input frame
