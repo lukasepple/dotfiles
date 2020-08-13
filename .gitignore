@@ -2,13 +2,6 @@ nvim/.config/nvim/.netrwhist
 nvim/.config/nvim/autoload/plug.vim.old
 nvim/.config/nvim/plugged
 
-newsbeuter/.newsbeuter/cache.db
-newsbeuter/.newsbeuter/history.*
-
-vim/.vim/autoload/plug.vim.old
-vim/.vim/plugged/
-vim/.vim/.netrwhist
-
 xmonad/.xmonad/xmonad.hi
 xmonad/.xmonad/xmonad.o
 xmonad/.xmonad/xmonad.errors
