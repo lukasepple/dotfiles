@@ -1,2 +1,0 @@
-#!/bin/sh
-mpv "$(find $HOME/Media/Stuff/noot/ | sort -R | head -n1)"
