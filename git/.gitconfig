@@ -7,3 +7,5 @@
 	t = log --graph --decorate --oneline
 [pull]
 	rebase = true
+[init]
+	defaultBranch = main
